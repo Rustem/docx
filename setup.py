@@ -20,7 +20,7 @@ long_description = """
 """
 
 setup(name="docx",
-      version=find_version('__version__.py'),
+      version=find_version('docx', '__version__.py'),
       description="Working with docx document.",
       classifiers=[
         'Development Status :: 5 - Production/Stable',
