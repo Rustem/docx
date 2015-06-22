@@ -6,6 +6,10 @@ from setuptools import setup, find_packages
 def read(*parts):
     return codecs.open(os.path.join(os.path.abspath(os.path.dirname(__file__)), *parts), 'r').read()
 
+install_requires = []
+with open('requires.txt', 'r') as fh:
+    install_requires = map(lambda s: s.strip(), filter(
+        lambda l: not l.startswith('-e'), fh.readlines()))
 
 def find_version(*file_paths):
     version_file = read(*file_paths)
@@ -38,5 +42,6 @@ setup(name="docx",
       url='https://github.com/Rustem/docx.git',
       license='MIT',
       packages=find_packages(),
+      install_requires=install_requires,
       zip_safe=False,
       )

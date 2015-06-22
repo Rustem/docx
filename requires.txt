@@ -1,0 +1,4 @@
+Pillow==2.8.2
+argparse==1.2.1
+lxml==3.4.4
+wsgiref==0.1.2
